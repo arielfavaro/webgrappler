@@ -1,0 +1,16 @@
+{
+  "name": "webgrappler",
+  "version": "0.0.1",
+  "description": "A frontend event data collector",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ariel Favaro",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^5.39.0",
+    "webpack-cli": "^4.7.2"
+  }
+}
