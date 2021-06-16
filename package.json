@@ -2,9 +2,10 @@
   "name": "webgrappler",
   "version": "0.0.1",
   "description": "A frontend event data collector",
-  "main": "index.js",
   "private": true,
   "scripts": {
+    "build:dev": "webpack --mode=development",
+    "build": "webpack --mode=production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ariel Favaro",
@@ -12,5 +13,12 @@
   "devDependencies": {
     "webpack": "^5.39.0",
     "webpack-cli": "^4.7.2"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "crypto-js": "^4.0.0",
+    "js-cookie": "^2.2.1",
+    "lodash": "^4.17.21",
+    "uuid": "^8.3.2"
   }
 }
