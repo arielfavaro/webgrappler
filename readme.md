@@ -13,6 +13,6 @@ Trigger event
 
 It will perform a POST request
 ```javascript
-WebGrappler.track('page_view', { your_data: value, rest});
+WebGrappler.track('page_view', { your_data: value, ...rest});
 ```
 
