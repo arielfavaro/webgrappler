@@ -16,3 +16,5 @@ It will perform a POST request
 WebGrappler.track('page_view', { your_data: value, ...rest});
 ```
 
+## TODO 📌
+- Add tests
