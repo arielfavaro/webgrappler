@@ -4,8 +4,8 @@ import { v4 as uuidv4 } from 'uuid';
 
 const options = {
     cookie_name: 'webgrappler_identity',
-    expires: 10 * 365, //Math.pow(2, 31),
-    sameSite: 'strict',
+    expires: 365, // days
+    sameSite: 'Lax',
     secure: true,
 }
 
