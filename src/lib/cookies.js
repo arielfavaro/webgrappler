@@ -1,6 +1,5 @@
-// import { SHA256 } from 'crypto-js';
 import Cookies from 'js-cookie';
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4, validate as uuidValidate, version as uuidVersion } from 'uuid';
 
 const options = {
     cookie_name: 'webgrappler_identity',
@@ -9,18 +8,26 @@ const options = {
     secure: true,
 }
 
-// const cookies_api = Cookies.withAttributes({ expires: options.expires, sameSite: options.sameSite });
+function uuidValidateV4(uuid) {
+    return uuidValidate(uuid) && uuidVersion(uuid) === 4;
+}
 
-function verifyIdentity() {
-    if (!Cookies.get(options.cookie_name)) {
-        Cookies.set(options.cookie_name, uuidv4(), { expires: options.expires, sameSite: options.sameSite });
-    }
+function handleCookieIdentity() {
+    const cookie_value = Cookies.get(options.cookie_name);
+
+    const uuid = uuidValidateV4(cookie_value) ? cookie_value : uuidv4();
+
+    Cookies.set(options.cookie_name, uuid, {
+        expires: options.expires,
+        sameSite: options.sameSite,
+        secure: options.secure
+    });
 }
 
 function getCookieIdentity() {
     return Cookies.get(options.cookie_name);
 }
 
-verifyIdentity();
+handleCookieIdentity();
 
 export { getCookieIdentity }
