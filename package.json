@@ -1,7 +1,7 @@
 {
   "name": "@arielfavaro/webgrappler",
   "version": "0.0.1",
-  "description": "A frontend event data collector",
+  "description": "A simple frontend track event emitter with cookie identification",
   "private": true,
   "scripts": {
     "build:dev": "webpack --mode=development",
