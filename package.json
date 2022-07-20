@@ -1,5 +1,5 @@
 {
-  "name": "webgrappler",
+  "name": "@arielfavaro/webgrappler",
   "version": "0.0.1",
   "description": "A frontend event data collector",
   "private": true,
